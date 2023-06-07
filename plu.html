@@ -54,7 +54,7 @@
         #signin .logo{
             margin-bottom: 8vh;
         }
-        .logo img{
+       #signin .logo img{
             width:300px
         }
 
@@ -63,6 +63,7 @@
             line-height: 2rem;
             font-weight: 500;
         }
+
         #signin .text-input{
             margin-bottom: 1.3rem;
             width: 100%;
@@ -93,6 +94,7 @@
             flex-direction: row;
             margin-bottom: 1.2rem;
             align-items: center;
+            width: 60;
         }
         .or .bar{
             flex: auto;
@@ -109,7 +111,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-           background: url("images/plu.png") no-repeat center center / cover;
+           background: url("images/" ) no-repeat center center / cover;
            height: 100vh;
            text-align: center;
         }
@@ -126,6 +128,7 @@
          #showcase .secondary-btn{
             width: 60%;
             margin: auto;
+            color: #f4f4f4;
         }
 
         #main-footer{
@@ -139,6 +142,16 @@
         #main-footer a{
             color: #f96816;
             text-decoration: underline;
+        }
+        
+        #signin .links a{
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+
         }
 
         .pri-btn{
@@ -161,6 +174,9 @@
         .pri-btn:hover{
             background-color: #ff7b39;
         }
+         .secondery-btn .links .or{
+            width: 60%;
+        }
 
         .secondery-btn{
             padding: 0.7rem 1rem;
@@ -175,8 +191,8 @@
             cursor: pointer;
             text-align: center;
             transition : all 0.5s;
-            width: 80%;
-            padding-bottom: 3rem;
+            
+            padding-bottom: 2rem;
         }
 
         .secondery-btn:hover{
@@ -195,7 +211,7 @@
             }
         }
 
-        @media(max-width:765px){
+        @media(max-width:65px){
            body{
             overflow: auto;
            }
@@ -219,6 +235,7 @@
             }
         }
         
+        
     </style>
     <title>sign in-PLURALSIGHT</title>
 </head>
@@ -226,15 +243,17 @@
     <div id ="wrapper">
         <div id='left'>
           <div id="signin">
-            <div id="logo">
-            <img src="images/plu.png" alt="Pluralsight">
+            <div class="logo">
+                <img src="images/plu.png" alt="Pluralsight" />
             </div>
             <form id="signin form">
                 <div>
                     <label>Email or usernam</label> 
-                    <input type="text" class="text-input" required ><br><br>
+                    <input type="text" class="text-input" required ><br>
+                    <div>
                     <label>Password</label>
-                    <input type="password" class="text-input" requird><br><br>  
+                    <input type="password" class="text-input" requird><br><br>
+                    </div>  
                 </div>
                 <button type="submit" class="pri-btn">Sign in</button><br>
             </form>
@@ -261,9 +280,10 @@
         </div>
         <div id="right">
             <div id="showcase">
-                <h1 class="showcase-text">Let`s Create the future together</h1><br><br>
-                <a href="#" class="secondary-btn">Startafree 10-day trial</a>
-
+                 <div cladd="showcase-content">
+                  <h1 class="showcase-text">Let`s Create the future <strong>together</strong></h1><br><br>
+                  <a href="#" class="secondery-btn">Startafree 10-day trial</a>
+               </div>
             </div>
 
         </div>
